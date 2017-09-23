@@ -1,16 +1,16 @@
-"""
-Home: https://github.com/kwmiebach/python-let
-
-Usage example:
-
-frot let import let
-with let(a=1,b=2) as l:
-  assert l.a == 1
-
-l.a # raises Exception
-"""
-
 class let:
+
+  """
+  Home: https://github.com/kwmiebach/python-let
+
+  Usage example:
+
+  from let import let
+  with let(a=1,b=2) as l:
+    assert l.a == 1
+
+  l.a # raises Exception
+  """
     
     def __init__(self, **bindings):
         self._bindings = bindings
