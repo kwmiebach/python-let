@@ -2,7 +2,8 @@
 Home: https://github.com/kwmiebach/python-let
 
 Usage example:
-    
+
+frot let import let
 with let(a=1,b=2) as l:
   assert l.a == 1
 
