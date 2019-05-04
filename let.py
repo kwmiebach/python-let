@@ -1,17 +1,17 @@
 class let:
 
-  """
-  Home: https://github.com/kwmiebach/python-let
+    """
+    Home: https://github.com/kwmiebach/python-let
 
-  Usage example:
+    Usage example:
 
-  from let import let
-  with let(a=1,b=2) as l:
-    assert l.a == 1
+    from lib.let import let
+    with let(a=1,b=2) as l:
+      assert l.a == 1
 
-  l.a # raises Exception
-  """
-    
+    l.a # raises Exception
+    """
+      
     def __init__(self, **bindings):
         self._bindings = bindings
         self.data = dict()
@@ -33,3 +33,10 @@ class let:
             raise Exception("Use let with 'with'")
         if not self.alive:
             raise Exception("No access outside 'with'")
+
+    def __str__(self):
+      return str(self._bindings)
+
+    def __repr__(self):
+      # todo also include self.__class__.__name__
+      return repr(self._bindings)
