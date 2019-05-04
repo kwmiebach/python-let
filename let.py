@@ -5,7 +5,7 @@ class let:
 
     Usage example:
 
-    from lib.let import let
+    from let import let
     with let(a=1,b=2) as l:
       assert l.a == 1
 
